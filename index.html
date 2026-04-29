@@ -559,8 +559,8 @@
 </section>
 <section id="репозиторий-контейнер-проекта" class="slide level2">
 <h2>📦 Репозиторий: Контейнер проекта</h2>
-<p>Локальный репозиторий (local repository) хранится на вашем компьютере, где вы можете работать над локальной версией проекта.</p>
-<p>Удаленный репозиторий (remote repository) хранится вне вашей локальной системы, обычно на сервере. Это позволяет разработчикам делиться кодом.</p>
+<p><strong>Локальный репозиторий</strong> (local repository) хранится на вашем компьютере, где вы можете работать над локальной версией проекта.</p>
+<p><strong>Удаленный репозиторий</strong> (remote repository) хранится вне вашей локальной системы, обычно на сервере. Это позволяет разработчикам делиться кодом.</p>
 <p>Создание локального репозитория: <code>git init</code></p>
 <p>После этой команды создается папка <code>.git</code> в которой будут храниться служебные файлы и файл <code>.gitignore</code></p>
 </section>
@@ -704,8 +704,8 @@ rsconnect/</code></pre>
 </section>
 <section id="фиксация-изменений-commit" class="slide level2">
 <h2>💾 Фиксация изменений (commit)</h2>
-<p><strong>Коммит</strong> – это снимок кода проекта в определенный момент времени, который сохраняется в истории коммитов репозитория. Обозначаются хешем (уникальная последовательность символов)</p>
-<div class="cell" data-reveal="true" data-layout-align="default">
+<p><strong>Коммит</strong> – это снимок кода проекта в определенный момент времени, который сохраняется в истории коммитов репозитория. Обозначаются хешем.</p>
+<div class="cell" data-reveal="true" data-layout-align="center">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
@@ -723,7 +723,7 @@ rsconnect/</code></pre>
 </div>
 </div>
 </div>
-<p>Коммит делается после добавления всех отслеживаемых файлов в индекс с помощью команды <code>git add</code></p>
+<p>Коммит делается после добавления файлов в индекс.</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href=""></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Сообщение коммита"</span>. <span class="co"># Создать коммит</span></span>
 <span id="cb16-2"><a href=""></a><span class="fu">git</span> log                            <span class="co"># Посмотреть историю коммитов</span></span>
 <span id="cb16-3"><a href=""></a><span class="fu">git</span> checkout <span class="op">&lt;</span>хеш коммита<span class="op">&gt;</span>         <span class="co"># Вернуться на состояние какого либо коммита</span></span>
@@ -836,7 +836,7 @@ rsconnect/</code></pre>
 </div>
 </div>
 </div>
-<p>Это позволяет нам добавлять новые (экспериментальные, незавершенные и потенциально опасные) функции в отдельных ветках, не трогая официальную стабильную версию кода, которая обычно хранится в ветке мастер (master).</p>
+<p>Ветки позволяют добавлять новые функции, не трогая официальную стабильную версию кода, которая обычно хранится в ветке мастер (master).</p>
 </section>
 <section id="слияния-веток-merge" class="slide level2">
 <h2>🔀 Слияния веток (merge)</h2>
@@ -867,7 +867,7 @@ rsconnect/</code></pre>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="./pic/merge.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="./pic/merge.png" class="quarto-figure quarto-figure-center" width="600"></a></p>
+<p><a href="./pic/merge.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="./pic/merge.png" class="quarto-figure quarto-figure-center" width="400"></a></p>
 </figure>
 </div>
 <p>![]</p>
@@ -952,37 +952,32 @@ rsconnect/</code></pre>
 <span id="cb25-14"><a href=""></a><span class="fu">git</span> branch <span class="at">-D</span> experiment/alt-model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div>
 </section>
-<section id="команды-для-работы-с-ветками" class="slide level2">
-<h2>🛠️ Команды для работы с ветками</h2>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href=""></a><span class="fu">git</span> branch                        <span class="co"># Список веток</span></span>
-<span id="cb26-2"><a href=""></a><span class="fu">git</span> checkout <span class="at">-b</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>            <span class="co"># Создать и перейти</span></span>
-<span id="cb26-3"><a href=""></a><span class="fu">git</span> checkout <span class="op">&lt;</span>name<span class="op">&gt;</span>               <span class="co"># Переключиться</span></span>
-<span id="cb26-4"><a href=""></a><span class="fu">git</span> merge <span class="op">&lt;</span>branch<span class="op">&gt;</span>                <span class="co"># Объединить с текущей</span></span>
-<span id="cb26-5"><a href=""></a><span class="fu">git</span> branch <span class="at">-d</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>              <span class="co"># Удалить ветку</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
 <section id="конфликты-при-слиянии" class="slide level2">
 <h2>⚠️ Конфликты при слиянии</h2>
 <p>При слиянии ветвей может возникнуть ситуация конфликта – когда изменения затронули один и тот же файл в одном месте и нельзя автоматически определить какие правки актуальны.</p>
 <p><a href="./pic/conflict.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="./pic/conflict.png"></a></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href=""></a><span class="ex">$</span> git merge feature</span>
-<span id="cb27-2"><a href=""></a><span class="ex">Auto-merging</span> print_array.js</span>
-<span id="cb27-3"><a href=""></a><span class="ex">CONFLICT</span> <span class="er">(</span><span class="ex">content</span><span class="kw">)</span><span class="bu">:</span> Merge conflict in print_array.js</span>
-<span id="cb27-4"><a href=""></a><span class="ex">Automatic</span> merge failed<span class="kw">;</span> <span class="ex">fix</span> conflicts and then commit the result.</span>
-<span id="cb27-5"><a href=""></a><span class="ex">$</span> git add .</span>
-<span id="cb27-6"><a href=""></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Array printing conflict resolved."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="разрешение-конфликтов" class="slide level2">
+<h2>🛠️ Разрешение конфликтов</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href=""></a><span class="ex">$</span> git merge feature</span>
+<span id="cb26-2"><a href=""></a><span class="ex">Auto-merging</span> print_array.js</span>
+<span id="cb26-3"><a href=""></a><span class="ex">CONFLICT</span> <span class="er">(</span><span class="ex">content</span><span class="kw">)</span><span class="bu">:</span> Merge conflict in print_array.js</span>
+<span id="cb26-4"><a href=""></a><span class="ex">Automatic</span> merge failed<span class="kw">;</span> <span class="ex">fix</span> conflicts and then commit the result.</span>
+<span id="cb26-5"><a href=""></a><span class="ex">$</span> git add .</span>
+<span id="cb26-6"><a href=""></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Array printing conflict resolved."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="системы-ветвления" class="slide level2">
 <h2>🗂️ Системы ветвления</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><a href="./pic/branches.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="./pic/branches.png" data-fig-height="300"></a></p>
+<p><a href="./pic/branches.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="./pic/branches.png" data-fig-width="30%"></a></p>
 </div><div class="column" style="width:50%;">
 <ul>
-<li class="fragment"><p>GitLab Flow VS Git flow VS GitHub flow <a href="https://yapro.ru/article/6172" class="uri">https://yapro.ru/article/6172</a></p></li>
-<li class="fragment"><p>GitHub Flow <a href="https://docs.github.com/ru/get-started/quickstart/github-flow" class="uri">https://docs.github.com/ru/get-started/quickstart/github-flow</a></p></li>
-<li class="fragment"><p>GitLab Flow <a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html" class="uri">https://docs.gitlab.com/ee/topics/gitlab_flow.html</a></p></li>
-<li class="fragment"><p>GitFlow <a href="https://www.atlassian.com/ru/git/tutorials/comparing-workflows/gitflow-workflow" class="uri">https://www.atlassian.com/ru/git/tutorials/comparing-workflows/gitflow-workflow</a></p></li>
-<li class="fragment"><p>Trunk-based-development <a href="https://habr.com/ru/companies/avito/articles/680522/" class="uri">https://habr.com/ru/companies/avito/articles/680522/</a></p></li>
+<li class="fragment"><a href="https://yapro.ru/article/6172">GitLab Flow VS Git flow VS GitHub flow</a></li>
+<li class="fragment"><a href="https://docs.github.com/ru/get-started/quickstart/github-flow">GitHub Flow</a></li>
+<li class="fragment"><a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html">GitLab Flow</a></li>
+<li class="fragment"><a href="https://www.atlassian.com/ru/git/tutorials/comparing-workflows/gitflow-workflow">GitFlow</a></li>
+<li class="fragment"><a href="https://habr.com/ru/companies/avito/articles/680522/">Trunk-based-development</a></li>
 </ul>
 </div></div>
 </section>
@@ -1013,10 +1008,13 @@ rsconnect/</code></pre>
 <p>2️⃣ Добавляем функционал, вносим изменения, создаем ветку</p>
 <p><a href="./pic/tbd2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="./pic/tbd2.png"></a></p>
 </section>
-<section id="процесс-tbd-шаг-3-4" class="slide level2">
-<h2>🔄 Процесс TBD: Шаг 3-4</h2>
+<section id="процесс-tbd-шаг-3" class="slide level2">
+<h2>🔄 Процесс TBD: Шаг 3</h2>
 <p>3️⃣ Фиксируем результат изменений, мерджим ветку</p>
 <p><a href="./pic/tbd3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="./pic/tbd3.png"></a></p>
+</section>
+<section id="процесс-tbd-шаг-4" class="slide level2">
+<h2>🔄 Процесс TBD: Шаг 4</h2>
 <p>4️⃣ Выпускаем релиз</p>
 <p><a href="./pic/tbd4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="./pic/tbd4.png"></a></p>
 </section>
@@ -1039,14 +1037,14 @@ rsconnect/</code></pre>
 <section id="подключение-удаленного-репозитория" class="slide level2">
 <h2>🔗 Подключение удаленного репозитория</h2>
 <p>Если мы подключим удаленный репозиторий к своему локальному, то у нас появятся копии всех ссылочных объектов удаленного репозитория. То есть, например, у удаленного репозитория есть ветка main, а у нас будет копия этой ветки – <code>origin/main</code>.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href=""></a><span class="co"># Добавление удаленного репозитория к локальному</span></span>
-<span id="cb28-2"><a href=""></a><span class="fu">git</span> remote add <span class="op">&lt;</span>название удаленного репозитория<span class="op">&gt;</span> <span class="op">&lt;</span>ссылка на удаленный репозиторий<span class="op">&gt;</span></span>
-<span id="cb28-3"><a href=""></a></span>
-<span id="cb28-4"><a href=""></a><span class="co"># Показать текущий удаленный репозиторий</span></span>
-<span id="cb28-5"><a href=""></a><span class="fu">git</span> remote show <span class="op">&lt;</span>название удаленного репозитория<span class="op">&gt;</span></span>
-<span id="cb28-6"><a href=""></a></span>
-<span id="cb28-7"><a href=""></a><span class="co"># Удалить привязку удаленного репозитория к локальному</span></span>
-<span id="cb28-8"><a href=""></a><span class="fu">git</span> remote remove <span class="op">&lt;</span>название удаленного репозитория<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href=""></a><span class="co"># Добавление удаленного репозитория к локальному</span></span>
+<span id="cb27-2"><a href=""></a><span class="fu">git</span> remote add <span class="op">&lt;</span>название удаленного репозитория<span class="op">&gt;</span> <span class="op">&lt;</span>ссылка на удаленный репозиторий<span class="op">&gt;</span></span>
+<span id="cb27-3"><a href=""></a></span>
+<span id="cb27-4"><a href=""></a><span class="co"># Показать текущий удаленный репозиторий</span></span>
+<span id="cb27-5"><a href=""></a><span class="fu">git</span> remote show <span class="op">&lt;</span>название удаленного репозитория<span class="op">&gt;</span></span>
+<span id="cb27-6"><a href=""></a></span>
+<span id="cb27-7"><a href=""></a><span class="co"># Удалить привязку удаленного репозитория к локальному</span></span>
+<span id="cb27-8"><a href=""></a><span class="fu">git</span> remote remove <span class="op">&lt;</span>название удаленного репозитория<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="сервисы-для-удаленных-репозиториев" class="slide level2">
 <h2>🌐 Сервисы для удаленных репозиториев</h2>
@@ -1058,18 +1056,18 @@ rsconnect/</code></pre>
 </ul>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href=""></a><span class="co"># Копирование удаленного репозитория на локальный компьютер</span></span>
-<span id="cb29-2"><a href=""></a><span class="fu">git</span> clone <span class="op">&lt;</span>ссылка на удаленный репозиторий<span class="op">&gt;</span> <span class="op">&lt;</span>имя папки репозитория<span class="op">&gt;</span></span>
-<span id="cb29-3"><a href=""></a></span>
-<span id="cb29-4"><a href=""></a><span class="co"># Получение изменений из удаленного репозитория </span></span>
-<span id="cb29-5"><a href=""></a><span class="co"># не обновляет рабочую копию, а получает ссылки)</span></span>
-<span id="cb29-6"><a href=""></a><span class="fu">git</span> fetch <span class="op">&lt;</span>имя удаленного репозитория<span class="op">&gt;</span></span>
-<span id="cb29-7"><a href=""></a></span>
-<span id="cb29-8"><a href=""></a><span class="co"># Получение изменений из удаленного репозитория (изменяет рабочую копию)</span></span>
-<span id="cb29-9"><a href=""></a><span class="fu">git</span> pull <span class="op">&lt;</span>имя удаленного репозитория<span class="op">&gt;</span></span>
-<span id="cb29-10"><a href=""></a></span>
-<span id="cb29-11"><a href=""></a><span class="co"># Отправка изменений в удаленный репозиторий</span></span>
-<span id="cb29-12"><a href=""></a><span class="fu">git</span> push <span class="op">&lt;</span>имя удаленного репозитория<span class="op">&gt;</span> <span class="op">&lt;</span>имя ветки<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href=""></a><span class="co"># Копирование удаленного репозитория на локальный компьютер</span></span>
+<span id="cb28-2"><a href=""></a><span class="fu">git</span> clone <span class="op">&lt;</span>ссылка на удаленный репозиторий<span class="op">&gt;</span> <span class="op">&lt;</span>имя папки репозитория<span class="op">&gt;</span></span>
+<span id="cb28-3"><a href=""></a></span>
+<span id="cb28-4"><a href=""></a><span class="co"># Получение изменений из удаленного репозитория </span></span>
+<span id="cb28-5"><a href=""></a><span class="co"># не обновляет рабочую копию, а получает ссылки)</span></span>
+<span id="cb28-6"><a href=""></a><span class="fu">git</span> fetch <span class="op">&lt;</span>имя удаленного репозитория<span class="op">&gt;</span></span>
+<span id="cb28-7"><a href=""></a></span>
+<span id="cb28-8"><a href=""></a><span class="co"># Получение изменений из удаленного репозитория (изменяет рабочую копию)</span></span>
+<span id="cb28-9"><a href=""></a><span class="fu">git</span> pull <span class="op">&lt;</span>имя удаленного репозитория<span class="op">&gt;</span></span>
+<span id="cb28-10"><a href=""></a></span>
+<span id="cb28-11"><a href=""></a><span class="co"># Отправка изменений в удаленный репозиторий</span></span>
+<span id="cb28-12"><a href=""></a><span class="fu">git</span> push <span class="op">&lt;</span>имя удаленного репозитория<span class="op">&gt;</span> <span class="op">&lt;</span>имя ветки<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="работа-с-удаленным-репозиторием" class="slide level2">
@@ -1106,32 +1104,32 @@ rsconnect/</code></pre>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="co"># 🧬 Шаблон анализа клинических данных</span></span>
-<span id="cb30-2"><a href=""></a><span class="co"># ⚠️ Используйте синтетические данные для демонстрации!</span></span>
-<span id="cb30-3"><a href=""></a></span>
-<span id="cb30-4"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb30-5"><a href=""></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb30-6"><a href=""></a></span>
-<span id="cb30-7"><a href=""></a><span class="co"># Генерация примера данных (НЕ реальные пациенты!)</span></span>
-<span id="cb30-8"><a href=""></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb30-9"><a href=""></a>patient_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb30-10"><a href=""></a>  <span class="at">patient_id =</span> <span class="fu">paste0</span>(<span class="st">"P"</span>, <span class="fu">sprintf</span>(<span class="st">"%04d"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)),</span>
-<span id="cb30-11"><a href=""></a>  <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">85</span>, <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb30-12"><a href=""></a>  <span class="at">gender =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"M"</span>, <span class="st">"F"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb30-13"><a href=""></a>  <span class="at">bacteria =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"E.coli"</span>, <span class="st">"S.aureus"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb30-14"><a href=""></a>  <span class="at">resistance =</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">100</span>), <span class="dv">1</span>)</span>
-<span id="cb30-15"><a href=""></a>)</span>
-<span id="cb30-16"><a href=""></a></span>
-<span id="cb30-17"><a href=""></a><span class="co"># Базовый анализ</span></span>
-<span id="cb30-18"><a href=""></a>summary_stats <span class="ot">&lt;-</span> patient_data <span class="sc">%&gt;%</span></span>
-<span id="cb30-19"><a href=""></a>  <span class="fu">group_by</span>(bacteria) <span class="sc">%&gt;%</span></span>
-<span id="cb30-20"><a href=""></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(), <span class="at">mean_res =</span> <span class="fu">mean</span>(resistance), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb30-21"><a href=""></a></span>
-<span id="cb30-22"><a href=""></a><span class="fu">print</span>(summary_stats)</span>
-<span id="cb30-23"><a href=""></a></span>
-<span id="cb30-24"><a href=""></a><span class="co"># Визуализация (добавить в ветке experiment/visualization)</span></span>
-<span id="cb30-25"><a href=""></a><span class="co"># ggplot(summary_stats, aes(x = bacteria, y = mean_res)) +</span></span>
-<span id="cb30-26"><a href=""></a><span class="co">#   geom_col(fill = "#2E86AB") + theme_minimal()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a><span class="co"># 🧬 Шаблон анализа клинических данных</span></span>
+<span id="cb29-2"><a href=""></a><span class="co"># ⚠️ Используйте синтетические данные для демонстрации!</span></span>
+<span id="cb29-3"><a href=""></a></span>
+<span id="cb29-4"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb29-5"><a href=""></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb29-6"><a href=""></a></span>
+<span id="cb29-7"><a href=""></a><span class="co"># Генерация примера данных (НЕ реальные пациенты!)</span></span>
+<span id="cb29-8"><a href=""></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb29-9"><a href=""></a>patient_data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb29-10"><a href=""></a>  <span class="at">patient_id =</span> <span class="fu">paste0</span>(<span class="st">"P"</span>, <span class="fu">sprintf</span>(<span class="st">"%04d"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)),</span>
+<span id="cb29-11"><a href=""></a>  <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">85</span>, <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb29-12"><a href=""></a>  <span class="at">gender =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"M"</span>, <span class="st">"F"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb29-13"><a href=""></a>  <span class="at">bacteria =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"E.coli"</span>, <span class="st">"S.aureus"</span>), <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb29-14"><a href=""></a>  <span class="at">resistance =</span> <span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">100</span>, <span class="dv">0</span>, <span class="dv">100</span>), <span class="dv">1</span>)</span>
+<span id="cb29-15"><a href=""></a>)</span>
+<span id="cb29-16"><a href=""></a></span>
+<span id="cb29-17"><a href=""></a><span class="co"># Базовый анализ</span></span>
+<span id="cb29-18"><a href=""></a>summary_stats <span class="ot">&lt;-</span> patient_data <span class="sc">%&gt;%</span></span>
+<span id="cb29-19"><a href=""></a>  <span class="fu">group_by</span>(bacteria) <span class="sc">%&gt;%</span></span>
+<span id="cb29-20"><a href=""></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>(), <span class="at">mean_res =</span> <span class="fu">mean</span>(resistance), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb29-21"><a href=""></a></span>
+<span id="cb29-22"><a href=""></a><span class="fu">print</span>(summary_stats)</span>
+<span id="cb29-23"><a href=""></a></span>
+<span id="cb29-24"><a href=""></a><span class="co"># Визуализация (добавить в ветке experiment/visualization)</span></span>
+<span id="cb29-25"><a href=""></a><span class="co"># ggplot(summary_stats, aes(x = bacteria, y = mean_res)) +</span></span>
+<span id="cb29-26"><a href=""></a><span class="co">#   geom_col(fill = "#2E86AB") + theme_minimal()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section></section>
@@ -1146,26 +1144,26 @@ rsconnect/</code></pre>
 </section>
 <section id="шпаргалка-10-команд-для-старта" class="slide level2">
 <h2>🎓 Шпаргалка: 10 команд для старта</h2>
-<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href=""></a><span class="co">#### Настройка пользователя ####</span></span>
-<span id="cb31-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Имя"</span></span>
-<span id="cb31-3"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"email@domain.com"</span></span>
-<span id="cb31-4"><a href=""></a><span class="co">#### Создание/клонирование ####</span></span>
-<span id="cb31-5"><a href=""></a><span class="fu">git</span> init                          <span class="co"># Новый репозиторий</span></span>
-<span id="cb31-6"><a href=""></a><span class="fu">git</span> clone <span class="op">&lt;</span>url<span class="op">&gt;</span>                   <span class="co"># Скопировать удалённый</span></span>
-<span id="cb31-7"><a href=""></a><span class="co">#### Проверка ####</span></span>
-<span id="cb31-8"><a href=""></a><span class="fu">git</span> status                        <span class="co"># Что изменено? (чаще всего!)</span></span>
-<span id="cb31-9"><a href=""></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--graph</span>         <span class="co"># История с ветками</span></span>
-<span id="cb31-10"><a href=""></a><span class="co">#### Фиксация изменений ####</span></span>
-<span id="cb31-11"><a href=""></a><span class="fu">git</span> add <span class="op">&lt;</span>file<span class="op">&gt;</span>                    <span class="co"># Добавить в индекс</span></span>
-<span id="cb31-12"><a href=""></a><span class="fu">git</span> add .                         <span class="co"># Добавить все</span></span>
-<span id="cb31-13"><a href=""></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"описание"</span>          <span class="co"># Закоммитить</span></span>
-<span id="cb31-14"><a href=""></a><span class="co">#### Ветки ####</span></span>
-<span id="cb31-15"><a href=""></a><span class="fu">git</span> branch                        <span class="co"># Список</span></span>
-<span id="cb31-16"><a href=""></a><span class="fu">git</span> checkout <span class="at">-b</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>            <span class="co"># Создать + перейти</span></span>
-<span id="cb31-17"><a href=""></a><span class="fu">git</span> merge <span class="op">&lt;</span>branch<span class="op">&gt;</span>                <span class="co"># Объединить</span></span>
-<span id="cb31-18"><a href=""></a><span class="co">#### GitHub ####</span></span>
-<span id="cb31-19"><a href=""></a><span class="fu">git</span> push <span class="at">-u</span> origin main           <span class="co"># Отправить</span></span>
-<span id="cb31-20"><a href=""></a><span class="fu">git</span> pull origin main              <span class="co"># Получить</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href=""></a><span class="co">#### Настройка пользователя ####</span></span>
+<span id="cb30-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Имя"</span></span>
+<span id="cb30-3"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"email@domain.com"</span></span>
+<span id="cb30-4"><a href=""></a><span class="co">#### Создание/клонирование ####</span></span>
+<span id="cb30-5"><a href=""></a><span class="fu">git</span> init                          <span class="co"># Новый репозиторий</span></span>
+<span id="cb30-6"><a href=""></a><span class="fu">git</span> clone <span class="op">&lt;</span>url<span class="op">&gt;</span>                   <span class="co"># Скопировать удалённый</span></span>
+<span id="cb30-7"><a href=""></a><span class="co">#### Проверка ####</span></span>
+<span id="cb30-8"><a href=""></a><span class="fu">git</span> status                        <span class="co"># Что изменено? (чаще всего!)</span></span>
+<span id="cb30-9"><a href=""></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--graph</span>         <span class="co"># История с ветками</span></span>
+<span id="cb30-10"><a href=""></a><span class="co">#### Фиксация изменений ####</span></span>
+<span id="cb30-11"><a href=""></a><span class="fu">git</span> add <span class="op">&lt;</span>file<span class="op">&gt;</span>                    <span class="co"># Добавить в индекс</span></span>
+<span id="cb30-12"><a href=""></a><span class="fu">git</span> add .                         <span class="co"># Добавить все</span></span>
+<span id="cb30-13"><a href=""></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"описание"</span>          <span class="co"># Закоммитить</span></span>
+<span id="cb30-14"><a href=""></a><span class="co">#### Ветки ####</span></span>
+<span id="cb30-15"><a href=""></a><span class="fu">git</span> branch                        <span class="co"># Список</span></span>
+<span id="cb30-16"><a href=""></a><span class="fu">git</span> checkout <span class="at">-b</span> <span class="op">&lt;</span>name<span class="op">&gt;</span>            <span class="co"># Создать + перейти</span></span>
+<span id="cb30-17"><a href=""></a><span class="fu">git</span> merge <span class="op">&lt;</span>branch<span class="op">&gt;</span>                <span class="co"># Объединить</span></span>
+<span id="cb30-18"><a href=""></a><span class="co">#### GitHub ####</span></span>
+<span id="cb30-19"><a href=""></a><span class="fu">git</span> push <span class="at">-u</span> origin main           <span class="co"># Отправить</span></span>
+<span id="cb30-20"><a href=""></a><span class="fu">git</span> pull origin main              <span class="co"># Получить</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="что-почитать" class="slide level2">
 <h2>📖 Что почитать</h2>
@@ -1207,7 +1205,7 @@ rsconnect/</code></pre>
 <!-- -->
 <h4 id="git-для-науки">🔬 Git для науки</h4>
 <ul>
-<li class="fragment"><a href="https://epirhandbook.com/ru/new_pages/collaboration.ru.html">EpiHandbook: Контроль версий и совместная работа с помощью Git и Github</a></li>
+<li class="fragment"><a href="https://epirhandbook.com/ru/new_pages/collaboration.ru.html">EpiHandbook: Git и Github</a></li>
 <li class="fragment"><a href="https://happygitwithr.com">Happy Git and GitHub for the useR</a></li>
 <li class="fragment"><a href="https://orchid00.github.io/actions_sandbox/">Github actions with R</a></li>
 <li class="fragment"><a href="https://github.com/cjvanlissa/worcs">WORCS: Reproducible Workflows</a></li>
@@ -1224,7 +1222,7 @@ rsconnect/</code></pre>
 </div>
 </section></section>
 <section id="спасибо-за-внимание" class="title-slide slide level1 center">
-<h1>✨ Спасибо за внимание! 🙏</h1>
+<h1>🙏 Спасибо за внимание!</h1>
 <div class="quarto-auto-generated-content">
 <p><img src="img/logo-dd.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -1794,7 +1792,7 @@ rsconnect/</code></pre>
         });
       });
     </script>
-    <script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});
+    <script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {
